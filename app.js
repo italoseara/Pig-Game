@@ -8,14 +8,6 @@ init();
 document.querySelector('.btn-roll').addEventListener('click', function() {
     if (gameState) {
 
-        finalScore = document.querySelector('.input-score').value; // Select the input box
-
-        if (isNaN(parseInt(finalScore))) { // verify if it is a number in the input
-            finalScore = 100; // if it's not, so the finalScore is set to 100 as default
-        } else { 
-            finalScore = parseInt(finalScore); // if it is, so the finalScore is set as the input
-        }   
-
         dice = Math.floor(Math.random() * 6) + 1; // Random number (1 to 6)
         dice2 = Math.floor(Math.random() * 6) + 1;
         
@@ -45,6 +37,14 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 
 // Button to hold the points
 document.querySelector('.btn-hold').addEventListener('click', function() {
+    
+    finalScore = document.querySelector('.input-score').value; // Select the input box
+
+    if (isNaN(parseInt(finalScore))) { // verify if it is a number in the input
+        finalScore = 100; // if it's not, so the finalScore is set to 100 as default
+    } else { 
+        finalScore = parseInt(finalScore); // if it is, so the finalScore is set as the input
+    }   
 
     if (gameState) {
         document.getElementById('current-' + activePlayer).textContent = 0; // Reset the display score
