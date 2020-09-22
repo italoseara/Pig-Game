@@ -137,6 +137,25 @@ i {
     transition: margin 0.3s;
 }
 
+input:hover { border: 1px solid lightskyblue; }
+input:focus { border: 1px solid black; }
+.input-score::placeholder { font-family: Lato; font-size: 18px; }
+.input-score {
+    position: absolute;
+    transform: translateX(-50%);
+    text-align: center;
+    outline: none;
+    font-family: Lato;
+    color: #555;
+    background: white;
+    border: 1px solid #555;
+    font-size: 18px;
+    width: 160px;
+    height: 46px;
+    left: 50%;
+    top: 520px;
+}
+
 .btn-new { top: 45px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
